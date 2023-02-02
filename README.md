@@ -50,15 +50,29 @@ Cada objeto possue características de iluminação difusa que determinam quanta
 
 Obtemos a luz difusa através do seguinte cálculo:
 
-**Idif = IL . rdif (n . l)**
+**Idif = IL . rdif (n.l)**
 **Idif**: Intencidade da luz difusa da superfície
 **IL**: Intensidade da fonte de luz
 **rdif**: Coeficiente de reflectividade difusa da superfície
-**(n . l)**: Produto escalar entre vetorn nomal **n** e vetor luz **l**
+**(n.l)**: Produto escalar entre vetor nomal **n** e vetor luz **l**
 
 *Imagem exemplo iluminação com luz difusa*
 
 ### 3.4 - Luz Especular
+A componente especular de um objeto simula reflexos extremamente direcionais, sem que a cor dos raios seja afetada pela cor da superfície, **como num espelho**, e nos indica o quão "brilhante" este objeto é. Ela serve para simular a aparência de objetos de superfície muito polida e que refletem a luz sem modificar a sua cor, como objetos metálicos ou objetos esmaltados.
+
+Da mesma forma que nas reflexões difusas, toda superfície possue também um **coeficiente de reflectividade especular** que determina quanta luz é refletida por este objeto. A **intensidade da reflexão especular** é proporcional ao *cosseno do angulo entre a direção de visada e a direção de reflexão da luz*. Além disso existe ainda um **expoente especular**, que determina o quão rápido o reflexo especular decai quando o ângulo de visada se afasta do ângulo de reflexão. Este parâmetro determina o quão locais serão os reflexos e nos permite simular com perfeição a característica dos reflexos de superfícies brilhantes de serem extremamente localizados e restritos.
+
+Obtemos a luz especular através do seguinte cálculo:
+
+**Iespec = IL . respec . (v.r)^s**
+**Iespec**: Intencidade da luz especular da superfície
+**IL**: Intensidade da fonte de luz
+**respec**: Coeficiente de reflectividade especular da superfície
+**(v.r)**: Produto escalar entre vetor visão **v** e vetor reflexo **r**
+**s**: Expoente especular
+
+*Imagem exemplo iluminação com luz especular*
 
 ## Referências
 - Unity: <https://unity.com>
