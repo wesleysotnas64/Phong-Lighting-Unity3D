@@ -38,10 +38,10 @@ Em ambientes onde **não** há atuação da atmosfera, como na superfície lunar
 
 Obtemos a luz ambiente através do seguinte cálculo:
 
-**Iamb = IA . ramb**
-**Iamb**: Intencidade da luz ambiente da superfície
-**IA**: Intensidade Global da luz ambiente 
-**ramb**: Coeficiente de reflectividade ambiente da superfície
+- **Iamb = IA . ramb**
+- **Iamb**: Intencidade da luz ambiente da superfície
+- **IA**: Intensidade Global da luz ambiente 
+- **ramb**: Coeficiente de reflectividade ambiente da superfície
 
 *Imagem exemplo iluminação com luz ambiente*
 
@@ -51,10 +51,10 @@ Cada objeto possue características de iluminação difusa que determinam quanta
 Obtemos a luz difusa através do seguinte cálculo:
 
 **Idif = IL . rdif (n.l)**
-**Idif**: Intencidade da luz difusa da superfície
-**IL**: Intensidade da fonte de luz
-**rdif**: Coeficiente de reflectividade difusa da superfície
-**(n.l)**: Produto escalar entre vetor nomal **n** e vetor luz **l**
+- **Idif**: Intencidade da luz difusa da superfície
+- **IL**: Intensidade da fonte de luz
+- **rdif**: Coeficiente de reflectividade difusa da superfície
+- **(n.l)**: Produto escalar entre vetor nomal **n** e vetor luz **l**
 
 *Imagem exemplo iluminação com luz difusa*
 
@@ -66,13 +66,23 @@ Da mesma forma que nas reflexões difusas, toda superfície possue também um **
 Obtemos a luz especular através do seguinte cálculo:
 
 **Iespec = IL . respec . (v.r)^s**
-**Iespec**: Intencidade da luz especular da superfície
-**IL**: Intensidade da fonte de luz
-**respec**: Coeficiente de reflectividade especular da superfície
-**(v.r)**: Produto escalar entre vetor visão **v** e vetor reflexo **r**
-**s**: Expoente especular
+- **Iespec**: Intencidade da luz especular da superfície
+- **IL**: Intensidade da fonte de luz
+- **respec**: Coeficiente de reflectividade especular da superfície
+- **(v.r)**: Produto escalar entre vetor visão **v** e vetor reflexo **r**
+- **s**: Expoente especular
 
 *Imagem exemplo iluminação com luz especular*
+
+### 3.5 - Modelo completo
+O modelo de Phong completo é implementado através da soma das três componentes apresentadas acima:
+
+**I = Iamb + Idif + Iespec**
+
+- I = (IA . ramb) + (IL . rdif (n.l)) + (IL . respec . (v.r)^s)
+- I = (IA . ramb) + (IL . ((rdif (n.l)) + (respec . (v.r)^s)))
+
+[*Imagem exemplo da soma das cores*]
 
 ## Referências
 - Unity: <https://unity.com>
