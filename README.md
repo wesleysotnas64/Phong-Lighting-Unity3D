@@ -84,6 +84,8 @@ O modelo de Phong completo é implementado através da soma das três componente
 
 [*Imagem exemplo da soma das cores*]
 
+## 4 - Aplicando iluminação no Unity3D através de shaders.
+
 ## Referências
 - Unity: <https://unity.com>
 - Unity Documentation: <https://docs.unity3d.com/Manual/index.html>
