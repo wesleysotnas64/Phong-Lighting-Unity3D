@@ -5,6 +5,10 @@ Para aqueles que estudam Computação Gráfica e utilizam a Unity3D para desenvo
 
 O shader disponível é uma simples iluminação baseada no modelo de iluminação de Phong. Nele você pode modificá-lo da maneira que achar melhor e obter os resultados de renderização que você deseja.
 
+Além da explicação, de como funciona a iluminação de Phong, mostro o passo a passo para calcular no Unity3D através de shaders.
+
+Espero que ajude e goste do conteúdo.
+
 ## 2 - Como utilizar (Em desenvolvimento...)
 Aqui segue o passo a passo para utilizar o **.shader** na Unity3D.
 
