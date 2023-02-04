@@ -35,7 +35,7 @@ A partir desses três elementos, podemos extraír outros componente, também imp
 - Vetor luz **l** (obtido através de **L-P**)
 - Vetor reflexo **r** (obtido através de **2(l.n)n-l**)
 
-*Imagem para ilustrar os vetores e os pontos...*
+![Phong Vetores](https://user-images.githubusercontent.com/94082665/216787969-0eebc60c-9b1e-4d12-a6f5-a5a9caf2b894.png)
 
 ### 3.2 - Luz Ambiente
 Em ambientes onde **não** há atuação da atmosfera, como na superfície lunar, as superfícieas que não são iluminadas são completamente escuras. Já em ambientes onde há atuação atmosvera, é poissível observar que a luz irradiada de um objeto incide em outros, chamamos isso de iluminação ambiente.
