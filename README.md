@@ -87,7 +87,7 @@ O modelo de Phong completo é implementado através da soma das três componente
 - I = (IA . ramb) + (IL . rdif (n.l)) + (IL . respec . (v.r)^s)
 - I = (IA . ramb) + (IL . ((rdif (n.l)) + (respec . (v.r)^s)))
 
-[*Imagem exemplo da soma das cores*]
+![Phong Dog All](https://user-images.githubusercontent.com/94082665/216787115-20f38e4b-05d8-4fb5-ac04-b08bb6b1e75b.png)
 
 ## 4 - Aplicando iluminação no Unity3D através de shaders.
 
