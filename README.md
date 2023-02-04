@@ -47,7 +47,8 @@ Obtemos a luz ambiente através do seguinte cálculo:
 - **IA**: Intensidade Global da luz ambiente 
 - **ramb**: Coeficiente de reflectividade ambiente da superfície
 
-*Imagem exemplo iluminação com luz ambiente*
+![Phong Dog Ambient](https://user-images.githubusercontent.com/94082665/216786875-25cd2e9c-73a8-4022-a94e-b59b3df24fec.png)
+
 
 ### 3.3 - Luz Difusa
 Cada objeto possue características de iluminação difusa que determinam quanta luz é refletida por sua superfície. A quantidade de luz difusa refletida é independente da direção da qual a superfície é vista (observador), uma vez que superfícies que refletem de forma difusa refletem de forma igual em todas as direções. A intensidade da reflecção difusa varia apenas com o cosseno do ângulo entre a normal da superfície e a fonte de luz (**n . l**), que nos indica a quantidade de luz que incide sobre aquele ponto.
@@ -60,7 +61,7 @@ Obtemos a luz difusa através do seguinte cálculo:
 - **rdif**: Coeficiente de reflectividade difusa da superfície
 - **(n.l)**: Produto escalar entre vetor nomal **n** e vetor luz **l**
 
-*Imagem exemplo iluminação com luz difusa*
+![Phong Dog Difuse](https://user-images.githubusercontent.com/94082665/216786843-bf3ef01e-2708-42fc-9ebc-334fc3223e5c.png)
 
 ### 3.4 - Luz Especular
 A componente especular de um objeto simula reflexos extremamente direcionais, sem que a cor dos raios seja afetada pela cor da superfície, **como num espelho**, e nos indica o quão "brilhante" este objeto é. Ela serve para simular a aparência de objetos de superfície muito polida e que refletem a luz sem modificar a sua cor, como objetos metálicos ou objetos esmaltados.
@@ -76,7 +77,7 @@ Obtemos a luz especular através do seguinte cálculo:
 - **(v.r)**: Produto escalar entre vetor visão **v** e vetor reflexo **r**
 - **s**: Expoente especular
 
-*Imagem exemplo iluminação com luz especular*
+![Phong Dog Specular](https://user-images.githubusercontent.com/94082665/216786856-b9a9171a-ecfe-4812-849e-fe2d1dee606f.png)
 
 ### 3.5 - Modelo completo
 O modelo de Phong completo é implementado através da soma das três componentes apresentadas acima:
