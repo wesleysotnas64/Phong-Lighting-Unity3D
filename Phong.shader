@@ -1,10 +1,21 @@
-﻿Shader "Unlit/Phong"
+Shader "Unlit/Phong"
 {
     Properties
     {
-        _Albedo("Albedo", Color) = (1.0, 1.0, 1.0, 1.0)
+        _Albedo("Albedo", Color) = (1.0, 1.0, 1.0, 1.0) //cor do objeto
+
+        //Atributos Luz Ambiente
         _AmbientStrength("Ambient Strength", Range(0,1)) = 0.1
-        _SpecularStrength("Specular Strength", Range(0,1)) = 0.5
+        _AmbientStrengthReflectivity("Ambient Strength Reflectivity", Range(0,1)) = 0.5
+
+        //Intencidade da fonte de luz. Utilizada na luz difusa e especular.
+        _LightStrength("Light Strength", Range(0,1)) = 0.1
+
+        //Atributos Luz difusa
+        _DifuseStrengthReflectivity("Difuse Strength Reflectivity", Range(0,1)) = 0.1
+
+        //Atributos Luz especular
+        _SpecularStrengthReflectivity("Specular Strength Reflectivity", Range(0,1)) = 0.5
         _Shininess("Shininess", Range(0,256)) = 32
     }
     SubShader
@@ -36,7 +47,10 @@
 
             float4 _Albedo;
             float  _AmbientStrength;
-            float  _SpecularStrength;
+            float  _AmbientStrengthReflectivity;
+            float  _LightStrength;
+            float  _DifuseStrengthReflectivity;
+            float  _SpecularStrengthReflectivity;
             int    _Shininess;
 
             v2f vert (appdata v)
@@ -44,7 +58,7 @@
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
                 o.worldNormal = UnityObjectToWorldNormal(v.normal);
-                o.worldView = UnityObjectToViewPos(v.vertex);
+                o.worldView = WorldSpaceViewDir(v.vertex);
 
                 return o;
             }
@@ -62,8 +76,7 @@
                 float3 reflectDirection = normalize(reflect(-ligthDirection, normalDirection));
 
                 //Calculando iluminação ambiente
-                float ambientStrength =_AmbientStrength; 
-                float3 ambient = ambientStrength * ligthColor;
+                float3 ambient = _AmbientStrength * _AmbientStrengthReflectivity * ligthColor;
 
                 //Calculando iluminação difusa
                 float diff = dot
@@ -73,12 +86,12 @@
                 );
 
                 diff = max(diff, 0.0);
-                float3 difuse = diff * ligthColor;
+                float3 difuse = _LightStrength * _DifuseStrengthReflectivity * diff * ligthColor;
 
                 //Calculando iluminação especular (reflexo)
-                float specularStrength = _SpecularStrength;
+                
                 float spec = pow(max(dot(viewDirection, reflectDirection), 0.0), _Shininess);
-                float3 specular = specularStrength * spec * ligthColor;
+                float3 specular = _LightStrength * _SpecularStrengthReflectivity * spec * ligthColor;
                 
                 //Cor final
                 float3 finalColor = (ambient + difuse + specular) * objectColor;
