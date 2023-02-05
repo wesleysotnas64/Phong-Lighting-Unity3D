@@ -9,7 +9,7 @@ Além da explicação, de como funciona a iluminação de Phong, mostro o passo 
 
 Espero que ajude e goste do conteúdo.
 
-## 2 - Como utilizar (Em desenvolvimento...)
+## 2 - Como utilizar
 Aqui segue o passo a passo para utilizar o **.shader** na Unity3D.
 
 ### 2.1 - Preparação do ambiente
@@ -110,7 +110,7 @@ O modelo de Phong completo é implementado através da soma das três componente
 ![Phong Dog](https://user-images.githubusercontent.com/94082665/216791286-ea56e537-3e4a-4901-8554-eec91085e57a.png)
 
 
-## 4 - Aplicando iluminação no Unity3D através de shaders.
+## 4 - Aplicando iluminação no Unity3D através de shaders. (Em desenvolvimento...)
 
 ## Referências
 - Unity: <https://unity.com>
