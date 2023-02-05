@@ -13,8 +13,27 @@ Espero que ajude e goste do conteúdo.
 Aqui segue o passo a passo para utilizar o **.shader** na Unity3D.
 
 ### 2.1 - Preparação do ambiente
+- Ao criao o projeto no Unity3D, dê preferência ao 3D (UPR) Core.
+- Entre com o nome do projeto e a pasa destino que deseja salvar o projeto.
+- Crie o projeto e aguarde alguns minutos até o projeto ser configurado e estar pronto para uso.
+- Ao criar o projeto, na sessão de projetos, dentro da pasta **Assets**, crie 2 pastas, para se organizar, uma chamada **Shaders**, onde serão salvos os arquivos .shader, e outra **Materials** onde serão armazenados os materiais, os quais utilizarão os shaders.
+- Para finalizar, baixe o arquivo **.shader** disponibilizado no repositório.
+
+![Use Shaders 1](https://user-images.githubusercontent.com/94082665/216823753-807b525c-0bc2-43f6-a656-9543729353e3.png)
+![Use Shaders 2](https://user-images.githubusercontent.com/94082665/216823799-e3722a88-a9d5-4c96-865c-61f8b2eef5fb.png)
 
 ### 2.2 - Utilizando o Shader
+Como ambiente preparado, agora:
+- Na pasta **Shaders**, importe o arquivo **.shader**.
+- Na pasta **Materials** crie um novo material e aplique o shader.
+
+![Use Shaders 3](https://user-images.githubusercontent.com/94082665/216823828-d5010066-9dba-45a9-bcdb-335c56fd05fb.png)
+![Use Shaders 4](https://user-images.githubusercontent.com/94082665/216823837-9b8e0b74-a881-4e09-b1d1-006e196a7836.png)
+
+Agora basta configurar o material a sua preferência e utiliza-lo em um objeto 3D.
+
+![Use Shaders 5](https://user-images.githubusercontent.com/94082665/216823855-dc9d6823-85ce-4c71-a952-b4e917c663cf.png)
+
 
 ## 3 - Modelo de Iluminação de Phong
 O modelo de iluminação de Phong (Phong 1973) é o modelo de iluminação provavelmente mais utilizado em computação gráfica hoje em dia. No modelo de Phong, a luz em qualuqer ponto é composta por três componentes: **luz difusa**, **luz especular** e **luz ambiente**. Essas três componentes são aditivas e determinam o aspecto final da iluminação e da cor de um determinado ponto na cena ou da superfície de um determinado polígono plano contido nela.
